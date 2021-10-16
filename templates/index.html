@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Search page</title>
+    <link rel="stylesheet" href="url_for('static', filename='css/style.css')">
+{% endblock %}
+
+{% block body %}
+    <h1 style="text-align:center;">Predict the Medv</h1>
+    <div class="form">
+        <form action="/predict" method="post">
+            <input type="number" name="CRIM" id="CRIM" placeholder="CRIM" step=0.01>
+            <input type="number" name="ZN" id="ZN" placeholder="ZN" step=0.1>
+            <input type="number" name="INDUS" id="INDUS" placeholder="INDUS" step=0.1>
+            <input type="number" name="CHAS" id="CHAS" placeholder="CHAS" step=0.1>
+            <input type="number" name="NOX" id="NOX" placeholder="NOX" step=0.1>
+            <input type="number" name="RM" id="RM" placeholder="RM" step=0.1>
+            <input type="number" name="AGE" id="AGE" placeholder="AGE" step=0.1>
+            <input type="number" name="DIS" id="DIS" placeholder="DIS" step=0.1>
+            <input type="number" name="RAD" id="RAD" placeholder="RAD" step=0.1>
+            <input type="number" name="TAX" id="TAX" placeholder="TAX" step=0.1>
+            <input type="number" name="PTRATIO" id="PTRATIO" placeholder="PTRATIO" step=0.1>
+            <input type="number" name="B" id="B" placeholder="B" step=0.1>
+            <input type="number" name="LSTAT" id="LSTAT" placeholder="LSTAT" step=0.1>
+            <input type="submit" value="predict">
+        </form>
+    </div>
+{% endblock %}
